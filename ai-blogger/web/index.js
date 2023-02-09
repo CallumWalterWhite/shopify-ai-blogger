@@ -58,7 +58,7 @@ app.get("/api/products/create", async (_req, res) => {
 
 app.get("/api/gpt/blogheader", async (_req, res) => {
   try{  
-    gptService = ChatGPTService(process.env.OPENAI_API_KEY)
+    gptService = ChatGPTService("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")
     const blogres = await gptService.request(_req.query.text);
     res.status(200).send(blogres);
   }
